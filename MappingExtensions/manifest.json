@@ -5,11 +5,11 @@
   "gameVersion": "1.40.0",
   "id": "MappingExtensions",
   "name": "MappingExtensions",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "dependsOn": {
-    "BSIPA": "^4.3.0",
-    "SongCore": "^3.15.1",
-    "BS Utils": "^1.12.3"
+    "BSIPA": "^4.3.7",
+    "SongCore": "^3.16.0",
+    "BS Utils": "^1.14.3"
   },
   "links": {
     "project-source": "https://github.com/Kylemc1413/MappingExtensions",

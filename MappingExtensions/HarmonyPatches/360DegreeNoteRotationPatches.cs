@@ -78,7 +78,7 @@ namespace MappingExtensions.HarmonyPatches
                 .MatchEndForward(
                     new CodeMatch(OpCodes.Bne_Un),
                     new CodeMatch(OpCodes.Ldarg_0))
-                .ThrowIfInvalid()
+                .ThrowIfInvalid("placeholder string: required by Harmony")
                 .CreateLabel(out var destination)
                 .MatchStartBackwards(new CodeMatch(OpCodes.Bne_Un))
                 .InsertAndAdvance(

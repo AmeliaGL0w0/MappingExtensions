@@ -85,16 +85,16 @@ namespace MappingExtensions.HarmonyPatches
             {
                 return;
             }
-
-            const float delta = StaticBeatmapObjectSpawnMovementData.kTopLinesYPos - StaticBeatmapObjectSpawnMovementData.kUpperLinesYPos;
+            //these values arent provided by the game anymore, plus they were static values anyway, and from my brief testing, positioning seems to be fine
+            const float delta = 1.45f - 0.85f;
             var layer = (int)lineLayer;
             if (layer is >= 1000 or <= -1000)
             {
-                __result = StaticBeatmapObjectSpawnMovementData.kUpperLinesYPos - delta - delta + layer * delta / 1000;
+                __result = 0.85f - delta - delta + layer * delta / 1000;
             }
             else if (layer is > 2 or < 0)
             {
-                __result = StaticBeatmapObjectSpawnMovementData.kUpperLinesYPos - delta + layer * delta;
+                __result = 0.85f - delta + layer * delta;
             }
         }
     }

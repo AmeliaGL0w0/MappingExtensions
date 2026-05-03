@@ -85,7 +85,7 @@ namespace MappingExtensions.HarmonyPatches
                     new CodeMatch(i => i.opcode == OpCodes.Callvirt && ((MethodBase)i.operand).Name == $"get_{nameof(ObstacleController.width)}"),
                     new CodeMatch(OpCodes.Conv_R4),
                     new CodeMatch())
-                .ThrowIfInvalid()
+                .ThrowIfInvalid("placeholder string: required by Harmony")
                 .Insert(Transpilers.EmitDelegate<Func<float, float>>(obstacleWidth =>
                 {
                     if (!Plugin.active || obstacleWidth is < 1000 and > -1000)
@@ -129,8 +129,8 @@ namespace MappingExtensions.HarmonyPatches
                     obstacleHeight = height;
                     break;
             }
-
-            obstacleHeight *= StaticBeatmapObjectSpawnMovementData.layerHeight;
+            //this value isnt provided by the game anymore, plus it was a static value anyway, and from my brief testing, positioning seems to be fine
+            obstacleHeight *= 0.6f;
 
             obstacleSpawnData = new ObstacleSpawnData(obstacleSpawnData.moveOffset, obstacleSpawnData.obstacleWidth, obstacleHeight);
         }
