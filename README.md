@@ -1,3 +1,5 @@
+# this is my lazy attempt at making ME work on 1.43 and above. it *"works"*, but im not providing support for this, and id just rather wait for Meivyn to update the original mod officially.
+
 ##### [GitHub](https://github.com/Kylemc1413/MappingExtensions)
 ##### See Old Readme for legacy maps [HERE](README-Beatmapv2.md)
 
